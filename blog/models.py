@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from blog.extensions import db
 
 
-class User(db.Model, UserMixin):
+class Admin(db.Model, UserMixin):
     """ 平台用户"""
 
     id = db.Column(db.Integer, primary_key=True)  # 主键

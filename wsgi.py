@@ -1,12 +1,13 @@
-from flask import Flask
+import os
+from dotenv import load_dotenv
 
-app = Flask(__name__)
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+if os.path.exists(dotenv_path):
+    load_dotenv(dotenv_path)
 
-
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
+from blog import create_app
 
 
 if __name__ == '__main__':
-    app.run()
+    app=create_app('production')
+    app.run(debug=True,host="127.0.0.1")

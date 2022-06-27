@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import render_template,flash,redirect,url_for,request,current_app,Blueprint,abort,make_response
 from flask_login import current_user
 from blog.extensions import db

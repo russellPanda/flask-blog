@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from flask_ckeditor import CKEditorField
 from flask_wtf import FlaskForm
 from wtforms import StringField,SubmitField,SelectField,TextAreaField,ValidationError,HiddenField,BooleanField,PasswordField
